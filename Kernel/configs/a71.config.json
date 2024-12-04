@@ -35,8 +35,8 @@
       "use": true,
       "release": true,
       "custom": {
-        "repo": "https://github.com/CCCC-L/anyKernel3",
-        "branch": "main"
+        "repo": "",
+        "branch": ""
       }
     },
     "enableKernelSU": true,
