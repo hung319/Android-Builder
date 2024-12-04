@@ -22,21 +22,20 @@
     ],
     "enableCcache": true,
     "params": {
-      "ARCH": "",
-      "CC": "",
+      "ARCH": "arm64",
+      "CC": "clang",
       "externalCommands": {
-        "CROSS_COMPILE": "",
-        "CROSS_COMPILE_ARM32": "",
-        "CROSS_COMPILE_COMPAT": "",
-        "CLANG_TRIPLE": ""
+        "CROSS_COMPILE": "llvm-arm-toolchain-ship-10.0/bin/aarch64-linux-android-",
+        "CROSS_COMPILE_ARM32": "llvm-arm-toolchain-ship-10.0/bin/armv7-linux-androideabi",
+        "CLANG_TRIPLE": "aarch64-linux-gnu-"
       }
     },
     "AnyKernel3": {
       "use": true,
       "release": true,
       "custom": {
-        "repo": "",
-        "branch": ""
+        "repo": "https://github.com/CCCC-L/anyKernel3",
+        "branch": "main"
       }
     },
     "enableKernelSU": true,
