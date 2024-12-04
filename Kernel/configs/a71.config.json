@@ -5,7 +5,7 @@
       "repo": "https://github.com/hung319/a71-k",
       "branch": "main",
       "device": "a71",
-      "defconfig": "arch/arm64/configs/a71_eur_open_defconfig"
+      "defconfig": "a71_eur_open_defconfig"
     },
     "toolchains": [
       {
