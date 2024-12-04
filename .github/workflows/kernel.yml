@@ -1,12 +1,7 @@
 name: Build kernels
 
 on:
-  push:
-    paths:
-      - ".github/workflows/kernel.yml"
   workflow_dispatch:
-  schedule:
-    - cron: "14 13 * * 5"
 
 jobs:
   Read-configuration:
@@ -242,7 +237,7 @@ jobs:
           fi
 
           # Apply new KernelSU patches
-          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.9.5
+          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
 
           echo -e "CONFIG_KPROBES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
           echo -e "CONFIG_HAVE_KPROBES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
