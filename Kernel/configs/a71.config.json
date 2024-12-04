@@ -34,7 +34,6 @@
     "AnyKernel3": {
       "use": true,
       "release": true
-      }
     },
     "enableKernelSU": true
   }
