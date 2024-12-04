@@ -10,13 +10,15 @@
     "toolchains": [
       {
         "name": "clang",
-        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/tags/android-platform-14.0.0_r14/clang-r450784e.tar.gz",
-        "binaryEnv": ["./bin"]
+        "repo": "https://github.com/ravindu644/Toolchains_by_Google.git",
+        "branch": "main",
+        "binaryEnv": ["./clang-10.0/bin"]
       },
       {
         "name": "gcc",
-        "url": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+archive/961622e926a1b21382dba4dd9fe0e5fb3ee5ab7c.tar.gz",
-        "binaryEnv": ["./bin"]
+        "repo": "https://github.com/ravindu644/Toolchains_by_Google.git",
+        "branch": "main",
+        "binaryEnv": ["./aarch64-4.9/bin"]
       }
     ],
     "enableCcache": true,
