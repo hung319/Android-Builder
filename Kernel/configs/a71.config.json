@@ -3,7 +3,7 @@
     "kernelSource": {
       "name": "android_kernel_samsung_sm7150",
       "repo": "https://github.com/pascua28/android_kernel_samsung_sm7150",
-      "branch": "fourteen",
+      "branch": "stable",
       "device": "a71",
       "defconfig": "a71_eur_open_defconfig"
     },
