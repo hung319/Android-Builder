@@ -286,6 +286,12 @@ jobs:
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
+      - name: 💾 Apply all patches from Kernel/LXC/Patches
+        working-directory: ${{ env.KERNEL_NAME }}
+        run: |
+          for patch in ${{ env.WORKSPACE }}/Kernel/LXC/Patches/*.patch; do
+            git am -s < "$patch" || echo "Failed to apply $patch"
+          done
       - name: 👍 Start building the kernel
         working-directory: ${{ env.KERNEL_NAME }}
         env:
