@@ -286,6 +286,9 @@ jobs:
             git am -s < ${{ env.WORKSPACE }}/LXC/Patches/do_execveat_common.patch
             git am -s < ${{ env.WORKSPACE }}/LXC/Patches/vfs_read.patch
             git am -s < ${{ env.WORKSPACE }}/LXC/Patches/vfs_statx.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/input_handle_event.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/inode.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/path_umount.patch
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
