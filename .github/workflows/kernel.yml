@@ -239,9 +239,12 @@ jobs:
           # Apply new KernelSU patches
           curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.9.5
 
-          echo -e "CONFIG_KSU=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
-          # sed -i '/enable_sucompat()/d' KernelSU/kernel/ksu.c
-          
+          echo -e "CONFIG_KPROBES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
+          echo -e "CONFIG_HAVE_KPROBES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
+          echo -e "CONFIG_KPROBE_EVENTS=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
+
+          cat arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
+
       - name: 😋 Setup LXC docker
         working-directory: ${{ env.KERNEL_NAME }}
         env:
@@ -282,16 +285,15 @@ jobs:
           fi
           if [ -f android-kernel/net/netfilter/xt_qtaguid.c ]; then
             git am -s < ${{ env.WORKSPACE }}/LXC/Patches/xt_qtaguid.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/do_faccessat.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/do_execveat_common.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/vfs_read.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/vfs_statx.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/input_handle_event.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/inode.patch
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/path_umount.patch
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
+      - name: Apply patch ✔️
+        working-directory: ${{ env.KERNEL_NAME }}
+        run: |
+         git am -s < ${{ env.WORKSPACE }}/LXC/Patches/path_umount.patch
+         echo "Done Patch ✔️"
+         fi
       - name: 👍 Start building the kernel
         working-directory: ${{ env.KERNEL_NAME }}
         env:
