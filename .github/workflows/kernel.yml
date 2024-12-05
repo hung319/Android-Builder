@@ -288,14 +288,6 @@ jobs:
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
-      - name: Apply patch ✔️
-        working-directory: ${{ env.KERNEL_NAME }}
-        run: |
-         git config user.email "hungh6122@gmail.com"
-         git config user.name "hung319"
-         git am -s < ${{ env.WORKSPACE }}/Kernel/LXC/Patches/path_umount.patch
-         echo "Done Patch ✔️"
-         fi
       - name: 👍 Start building the kernel
         working-directory: ${{ env.KERNEL_NAME }}
         env:
