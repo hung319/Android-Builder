@@ -1,9 +1,9 @@
 [
   {
     "kernelSource": {
-      "name": "a71",
-      "repo": "https://github.com/hung319/a71-k",
-      "branch": "main",
+      "name": "android_kernel_samsung_sm7150",
+      "repo": "https://github.com/pascua28/android_kernel_samsung_sm7150",
+      "branch": "fourteen",
       "device": "a71",
       "defconfig": "a71_eur_open_defconfig"
     },
@@ -36,6 +36,6 @@
       "release": true
     },
     "enableKernelSU": true,
-    "enableLXC": true
+    "enableLXC": false
   }
 ]
