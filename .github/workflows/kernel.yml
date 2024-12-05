@@ -286,13 +286,11 @@ jobs:
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
-      - name: 📝 Set git config for user
-        run: |
-          git config user.email "hungh6122@gmail.com"
-          git config user.name "hung319"
       - name: 💾 Apply all patches from Kernel/LXC/Patches
         working-directory: ${{ env.KERNEL_NAME }}
         run: |
+          git config user.email "hungh6122@gmail.com"
+          git config user.name "hung319"
           for patch in ${{ env.WORKSPACE }}/Kernel/LXC/Patches/*.patch; do
             git am -s < "$patch" || echo "Failed to apply $patch"
           done
