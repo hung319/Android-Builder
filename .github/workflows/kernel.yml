@@ -283,17 +283,13 @@ jobs:
           fi
           if [ -f android-kernel/net/netfilter/xt_qtaguid.c ]; then
             git am -s < ${{ env.WORKSPACE }}/LXC/Patches/xt_qtaguid.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/do_faccessat.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/do_execveat_common.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/vfs_read.patch
+            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/vfs_statx.patch
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
-      - name: 💾 Apply all patches from Kernel/LXC/Patches
-        working-directory: ${{ env.KERNEL_NAME }}
-        run: |
-          git config user.email "hungh6122@gmail.com"
-          git config user.name "hung319"
-          for patch in ${{ env.WORKSPACE }}/Kernel/LXC/Patches/*.patch; do
-            git am -s < "$patch" || echo "Failed to apply $patch"
-          done
       - name: 👍 Start building the kernel
         working-directory: ${{ env.KERNEL_NAME }}
         env:
