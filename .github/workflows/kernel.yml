@@ -289,8 +289,9 @@ jobs:
           fi
 
       - name: Apply patch ✔️
+        working-directory: ${{ env.KERNEL_NAME }}
         run: |
-         git am -s < Android-Builder/kernel/LXC/Patches/path_umount.patch
+         git am -s < ${{ env.WORKSPACE }}/Kernel/LXC/Patches/path_umount.patch
          echo "Done Patch ✔️"
          fi
       - name: 👍 Start building the kernel
