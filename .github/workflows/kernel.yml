@@ -241,7 +241,7 @@ jobs:
 
           sed -i '/enable_sucompat()/d' KernelSU/kernel/ksu.c
 
-          cat arch/${{ env.ARCH }}/configs/${{ env.KERNEL_DEFCONFIG_PATH }}
+          cat KernelSU/kernel/ksu.c
 
       - name: 😋 Setup LXC docker
         working-directory: ${{ env.KERNEL_NAME }}
