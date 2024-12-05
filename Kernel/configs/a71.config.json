@@ -1,8 +1,8 @@
 [
   {
     "kernelSource": {
-      "name": "android_kernel_samsung_sm7150",
-      "repo": "https://github.com/pascua28/android_kernel_samsung_sm7150",
+      "name": "a71",
+      "repo": "https://github.com/hung319/a71-k",
       "branch": "prime++",
       "device": "a71",
       "defconfig": "a71_eur_open_defconfig"
