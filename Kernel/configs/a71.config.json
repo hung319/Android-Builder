@@ -2,8 +2,8 @@
   {
     "kernelSource": {
       "name": "a71",
-      "repo": "https://github.com/eun0115/android_kernel_samsung_a71",
-      "branch": "ksu",
+      "repo": "https://github.com/ianmacd/a71.git",
+      "branch": "master",
       "device": "a71",
       "defconfig": "a71_eur_open_defconfig"
     },
@@ -36,6 +36,6 @@
       "release": true
     },
     "enableKernelSU": true,
-    "enableLXC": false
+    "enableLXC": true
   }
 ]
