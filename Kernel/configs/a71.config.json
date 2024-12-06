@@ -2,8 +2,8 @@
   {
     "kernelSource": {
       "name": "a71",
-      "repo": "https://github.com/hung319/a71-k",
-      "branch": "main",
+      "repo": "https://github.com/eun0115/android_kernel_samsung_a71",
+      "branch": "ksu",
       "device": "a71",
       "defconfig": "a71_eur_open_defconfig"
     },
