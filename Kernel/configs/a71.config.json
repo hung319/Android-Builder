@@ -3,7 +3,7 @@
     "kernelSource": {
       "name": "a71",
       "repo": "https://github.com/hung319/a71-k",
-      "branch": "prime++",
+      "branch": "main",
       "device": "a71",
       "defconfig": "a71_eur_open_defconfig"
     },
