@@ -2,10 +2,10 @@
   {
     "kernelSource": {
       "name": "a71",
-      "repo": "https://github.com/ianmacd/a71.git",
-      "branch": "master",
+      "repo": "https://github.com/eun0115/android_kernel_samsung_a71",
+      "branch": "ksu",
       "device": "a71",
-      "defconfig": "a71_eur_open_defconfig"
+      "defconfig": "a71_defconfig"
     },
     "toolchains": [
       {
@@ -21,7 +21,7 @@
         "binaryEnv": ["./aarch64-4.9/bin"]
       }
     ],
-    "enableCcache": true,
+    "enableCcache": false,
     "params": {
       "ARCH": "arm64",
       "CC": "clang",
@@ -35,7 +35,7 @@
       "use": true,
       "release": true
     },
-    "enableKernelSU": true,
-    "enableLXC": true
+    "enableKernelSU": false,
+    "enableLXC": false
   }
 ]
