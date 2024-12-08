@@ -2,10 +2,10 @@
   {
     "kernelSource": {
       "name": "a71",
-      "repo": "https://github.com/eun0115/android_kernel_samsung_a71",
-      "branch": "oneui",
+      "repo": "https://github.com/hung319/a71-kmod",
+      "branch": "main",
       "device": "a71",
-      "defconfig": "a71_defconfig"
+      "defconfig": "a71_eur_open_defconfig"
     },
     "toolchains": [
       {
