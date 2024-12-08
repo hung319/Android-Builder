@@ -238,6 +238,7 @@ jobs:
 
           # Apply new KernelSU patches
           curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s
+          sed -i '/enable_sucompat()/d' KernelSU/kernel/ksu.c
 
       - name: 😋 Setup LXC docker
         working-directory: ${{ env.KERNEL_NAME }}
