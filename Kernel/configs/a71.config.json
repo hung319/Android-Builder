@@ -21,7 +21,7 @@
         "binaryEnv": ["./aarch64-4.9/bin"]
       }
     ],
-    "enableCcache": false,
+    "enableCcache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "clang",
